@@ -1,0 +1,23 @@
+{
+	"ImportPath": "github.com/zoumo/go_test",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "github.com/zoumo/logdog",
+			"Rev": "0f0cef4784339f6c7513482e23e2570452c112fc"
+		},
+		{
+			"ImportPath": "github.com/zoumo/logdog/pkg/pythonic",
+			"Rev": "0f0cef4784339f6c7513482e23e2570452c112fc"
+		},
+		{
+			"ImportPath": "github.com/zoumo/logdog/pkg/when",
+			"Rev": "0f0cef4784339f6c7513482e23e2570452c112fc"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
+			"Rev": "84e98f45760e87786b7f24603b8166a6fa09811d"
+		}
+	]
+}

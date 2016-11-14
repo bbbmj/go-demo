@@ -1,16 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"os"
-
-	"github.com/zoumo/logdog"
 )
 
 func cat(filename string) {
 	f, err := os.Open(filename)
 	defer f.Close()
 	if err != nil {
-		logdog.Error(err)
+		fmt.Println(err)
 		return
 	}
 

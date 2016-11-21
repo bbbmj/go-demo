@@ -17,8 +17,8 @@ docker run --rm integration
 
 # publish
 
-docker rmi cargo.caicloud.io/caicloud/golang
-docker rmi golang
+# docker rmi cargo.caicloud.io/caicloud/golang
+# docker rmi golang
 
 echo done
 

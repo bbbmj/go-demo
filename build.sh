@@ -7,7 +7,7 @@ docker pull cargo.caicloud.io/caicloud/golang
 docker tag cargo.caicloud.io/caicloud/golang golang
 
 # git clone https://github.com/zoumo/go_test.git $PWD/go_test
-docker run --rm -v $PWD:/go/src/github.com/zoumo/go_test -w /go/src/github.com/zoumo/go_test golang sh build.sh
+docker run --rm -v $PWD:/go/src/github.com/zoumo/go_test -w /go/src/github.com/zoumo/go_test golang sh build_in_docker.sh
 
 # build
 docker build -t integration $PWD

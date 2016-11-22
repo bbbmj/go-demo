@@ -1,17 +1,24 @@
 #!/bin/bash
-
+set -x
 set -e
 
-command_exists() {
-    command -v "$@" > /dev/null 2>&1
-}
+# pre build
+docker pull cargo.caicloud.io/caicloud/golang
+docker tag cargo.caicloud.io/caicloud/golang golang
 
-# if ! command_exists godep; then
-#     go get github.com/tools/godep
-# fi
+# git clone https://github.com/zoumo/go_test.git $PWD/go_test
+docker run --rm -v $PWD:/go/src/github.com/zoumo/go_test -w /go/src/github.com/zoumo/go_test golang sh build.sh
 
-# godep get
+# build
+docker build -t integration $PWD
 
-go test .
+# integration
+docker run --rm integration
 
-go build -o cyclone .
+# publish
+
+# docker rmi cargo.caicloud.io/caicloud/golang
+# docker rmi golang
+
+echo done
+

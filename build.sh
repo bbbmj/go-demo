@@ -15,7 +15,7 @@ echo ">>>>>>>>>> build image"
 docker build -t integration $PWD
 
 # integration
-echp ">>>>>>>>>> integration test"
+echo ">>>>>>>>>> integration test"
 docker run --rm integration
 
 # publish

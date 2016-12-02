@@ -1,0 +1,23 @@
+pre_build:
+  cloud: xxx
+  node: xxx
+  image: cargo.caicloud.io/caicloud/golang
+  environment:
+    - BUILD_PATH=/go/src/github.com/zoumo/go_test
+  commands:
+    - mkdir -p $BUILD_PATH
+    - cp -rf * $BUILD_PATH
+    - cd $BUILD_PATH
+    - sh build_in_docker.sh
+    - mv /go/src/github.com/zoumo/go_test/cyclone /root/code
+
+build:
+    context_dir: . # /root/code
+
+
+integration:
+    image: BUILT_IMAGE
+
+
+
+

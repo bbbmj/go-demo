@@ -1,23 +1,9 @@
-pre_build:
-  cloud: xxx
-  node: xxx
-  image: cargo.caicloud.io/caicloud/golang
-  environment:
-    - BUILD_PATH=/go/src/github.com/zoumo/go_test
-  commands:
-    - mkdir -p $BUILD_PATH
-    - cp -rf * $BUILD_PATH
-    - cd $BUILD_PATH
-    - sh build_in_docker.sh
-    - mv /go/src/github.com/zoumo/go_test/cyclone /root/code
-
-build:
-    context_dir: . # /root/code
-
-
-integration:
-    image: BUILT_IMAGE
-
-
-
-
+deploy:
+  - type: kubernetes #caicloud_claas
+    host: circle-dev.caicloudprivatetest.com
+    token: 66211d912520bc1fde1aef0717ebef0a59e47ec022bb81857b8550259c38e207c9e6220b151cec86dc200defd015001be0bb675e5eb04ecbf3bf01f97891386a
+    cluster: circle-dev
+    namespace: cyclone
+    deployment: nginx
+    containers:
+      - nginx:1.11-alpine

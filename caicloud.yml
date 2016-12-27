@@ -1,3 +1,6 @@
+build:
+   dockerfile_name: Dockerfile
+
 deploy:
   - type: kubernetes #caicloud_claas
     host: circle-dev.caicloudprivatetest.com

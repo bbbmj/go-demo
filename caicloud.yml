@@ -9,4 +9,4 @@ deploy:
     namespace: cyclone
     deployment: nginx
     containers:
-      - nginx:1.11-alpine
+      - nginx

@@ -1,10 +1,10 @@
-# FROM busybox
+FROM busybox
 
-# COPY ./cyclone /root
-# COPY ./testfile /root
+COPY ./cyclone /root
+COPY ./testfile /root
 
-# WORKDIR /root
+WORKDIR /root
 
-# CMD ["./cyclone", "testfile"]
+CMD ["./cyclone", "testfile"]
 
-FROM nginx:1.10.2-alpine
+# FROM nginx:1.10.2-alpine

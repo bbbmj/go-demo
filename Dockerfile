@@ -1,4 +1,4 @@
-FROM busybox
+FROM cargo.caicloud.io/caicloud/busybox
 
 COPY ./cyclone /root
 COPY ./testfile /root

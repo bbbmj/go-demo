@@ -51,6 +51,7 @@ podTemplate(
                 sh '''
                     mkdir -p /go/src/github.com/zoumo
                     ln -s $(pwd) /go/src/github.com/zoumo/go-demo
+                    cd /go/src/github.com/zoumo/go-demo
                     go test .
                     go build -o cyclone .
                 '''

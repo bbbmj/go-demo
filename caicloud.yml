@@ -6,7 +6,7 @@ deploy:
     host: https://dev.caicloudprivatetest.com
     token: d9b04c43c25de5fc7287f7515bf4dc28015c0d43ec547d561c2ba2feea3ba79c1b77e501fdeb23bed14f74578a9675d42919ffb6e2f05490610f6c54b3a105b0
     cluster: dev
-    namespace: default
-    deployment: test
+    namespace: cyclone
+    deployment: nginx
     containers:
-      - pod-c1
+      - nginx
